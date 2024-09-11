@@ -1,0 +1,73 @@
+.content-wrapper {
+  padding: 1rem;
+}
+.navbar {
+  background-color: #fbf7e3;
+  padding: 1rem 0.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  width: 100%;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.navbar ul li {
+  display: inline-block;
+  background-color: #f3df85;
+  padding: 0.5rem 0.7rem;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.navbar ul li a {
+  font-size: 0.8rem;
+}
+
+.navbar ul li img {
+  height: 30px;
+}
+
+.shop-link {
+  max-width: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.navbar .shop-link a {
+  padding-block: 0.7rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 548px) {
+  .shop-link {
+    max-width: none;
+    min-width: 200px;
+    order: -1;
+  }
+
+  .navbar ul {
+    width: 80%;
+    gap: 0.2rem;
+  }
+
+  .navbar ul li {
+    flex-grow: 1;
+    display: inline-block;
+    background-color: #f3df85;
+    border-radius: 100px;
+  }
+}
