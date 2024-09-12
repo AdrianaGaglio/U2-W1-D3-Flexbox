@@ -1,19 +1,24 @@
 .content-wrapper {
-  padding: 1rem;
   max-width: 1000px;
   margin-inline: auto;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  row-gap: 0.5rem;
 }
 
 .card {
+  width: 100%;
+  padding-inline: 0.5rem;
+}
+
+.inner-card {
   background-color: #fbf7e3;
   border-radius: 100px;
-  max-width: 300px;
-  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 .card img {
@@ -24,7 +29,7 @@
   border-top-right-radius: 100px;
 }
 
-.card > div {
+.card > div > div {
   padding-inline: 1.5rem;
   padding-block: 1.5rem 1rem;
   display: flex;
@@ -59,4 +64,75 @@
   border: none;
   border-radius: 50px;
   padding: 0.5rem 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .card {
+    width: 49%;
+  }
+
+  .prod-info {
+    width: 60%;
+  }
+
+  .prod-info h4 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .prod-info p {
+    padding-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .card > div > div {
+    padding-top: 1rem;
+    padding-inline: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .card:nth-of-type(3n) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-wrapper {
+    max-width: none;
+  }
+
+  .card {
+    width: 33.333%;
+    padding-inline: 0.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card:nth-of-type(3n),
+  .card:nth-of-type(4n) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  .card:nth-of-type(4n) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    width: 25%;
+  }
+
+  .inner-card {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 20%;
+  }
 }

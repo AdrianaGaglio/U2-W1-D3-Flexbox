@@ -52,22 +52,48 @@
   align-items: center;
 }
 
-@media screen and (max-width: 548px) {
-  .shop-link {
-    max-width: none;
-    min-width: 200px;
-    order: -1;
-  }
-
+@media screen and (max-width: 547px) {
   .navbar ul {
-    width: 80%;
-    gap: 0.2rem;
   }
 
   .navbar ul li {
-    flex-grow: 1;
-    display: inline-block;
-    background-color: #f3df85;
-    border-radius: 100px;
+    width: 40%;
+  }
+
+  .navbar ul .shop-link {
+    width: 100%;
+    margin-inline: 20%;
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-wrapper {
+    display: flex;
+    padding: 0;
+  }
+
+  .navbar {
+    width: 180px;
+    border-radius: 0;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    align-items: center;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
   }
 }
